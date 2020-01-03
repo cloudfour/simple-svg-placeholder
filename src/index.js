@@ -1,6 +1,6 @@
-export default function simpleSvgPlaceholder({
-  width,
-  height = width,
+function simpleSvgPlaceholder({
+  width = 300,
+  height = 150,
   text = `${width}&#215;${height}`,
   fontFamily = 'sans-serif',
   fontWeight = 'bold',
@@ -31,3 +31,5 @@ export default function simpleSvgPlaceholder({
 
   return cleaned;
 }
+
+module.exports = simpleSvgPlaceholder;

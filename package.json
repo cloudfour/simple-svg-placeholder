@@ -1,5 +1,5 @@
 {
-  "name": "simple-svg-placeholder",
+  "name": "@cloudfour/simple-svg-placeholder",
   "version": "1.0.0",
   "description": "A very simple placeholder image generator with zero dependencies.",
   "keywords": [
@@ -11,7 +11,7 @@
     "mock",
     "URI"
   ],
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "check-lint": "prettier --list-different '**/*.js' && eslint '**/*.js'",
     "lint": "prettier --write '**/*.js' && eslint --fix '**/*.js'",
@@ -35,6 +35,7 @@
   "homepage": "https://github.com/cloudfour/simple-svg-placeholder#readme",
   "devDependencies": {
     "@cloudfour/eslint-plugin": "^5.0.0",
+    "ejs": "^3.0.1",
     "eslint": "^6.8.0",
     "prettier": "^1.19.1"
   }
