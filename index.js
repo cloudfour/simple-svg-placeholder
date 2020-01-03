@@ -5,20 +5,21 @@ function simpleSvgPlaceholder({
   fontFamily = 'sans-serif',
   fontWeight = 'bold',
   fontSize = Math.floor(Math.min(width, height) * 0.2),
-  textAdjust = fontSize * 0.4,
+  dy = fontSize * 0.35,
   bgColor = '#ddd',
   textColor = 'rgba(0,0,0,0.5)',
-  dataUri = true
+  dataUri = true,
+  charset = 'utf8'
 } = {}) {
   const str = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
     <rect fill="${bgColor}" width="${width}" height="${height}"/>
-    <text fill="${textColor}" font-family="${fontFamily}" font-size="${fontSize}" dy="${textAdjust}" font-weight="${fontWeight}" x="50%" y="50%" text-anchor="middle">${text}</text>
+    <text fill="${textColor}" font-family="${fontFamily}" font-size="${fontSize}" dy="${dy}" font-weight="${fontWeight}" x="50%" y="50%" text-anchor="middle">${text}</text>
   </svg>`;
 
   // Thanks to: filamentgroup/directory-encoder
   const cleaned = str
-    .replace(/[\n\r]/gim, '') // Strip newlines
-    .replace(/\t/gim, ' ') // Replace tabs with strings
+    .replace(/[\t\n\r]/gim, '') // Strip newlines and tabs
+    .replace(/\s\s+/g, ' ') // Condense multiple spaces
     .replace(/'/gim, '\\i'); // Normalize quotes
 
   if (dataUri) {
@@ -26,7 +27,7 @@ function simpleSvgPlaceholder({
       .replace(/\(/g, '%28') // Encode brackets
       .replace(/\)/g, '%29');
 
-    return `data:image/svg+xml;charset=utf8,${encoded}`;
+    return `data:image/svg+xml;charset=${charset},${encoded}`;
   }
 
   return cleaned;
