@@ -1,11 +1,11 @@
 function simpleSvgPlaceholder({
   width = 300,
   height = 150,
-  text = `${width}&#215;${height}`,
+  text = `${width}×${height}`,
   fontFamily = 'sans-serif',
   fontWeight = 'bold',
   fontSize = Math.floor(Math.min(width, height) * 0.2),
-  textAdjust = Math.floor(fontSize * 0.4),
+  textAdjust = fontSize * 0.4,
   bgColor = '#ddd',
   textColor = 'rgba(0,0,0,0.5)',
   dataUri = true
@@ -26,7 +26,7 @@ function simpleSvgPlaceholder({
       .replace(/\(/g, '%28') // Encode brackets
       .replace(/\)/g, '%29');
 
-    return `data:image/svg+xml;charset=US-ASCII,${encoded}`;
+    return `data:image/svg+xml;charset=utf8,${encoded}`;
   }
 
   return cleaned;
