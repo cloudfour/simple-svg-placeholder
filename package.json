@@ -11,7 +11,7 @@
     "mock",
     "URI"
   ],
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "check-lint": "prettier --list-different '**/*.js' && eslint '**/*.js'",
     "lint": "prettier --write '**/*.js' && eslint --fix '**/*.js'",
