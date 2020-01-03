@@ -4,8 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "check-lint": "prettier --list-different '**/*.js' && eslint '**/*.js'",
+    "lint": "prettier --write '**/*.js' && eslint --fix '**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "eslintConfig": {
+    "extends": "plugin:@cloudfour/recommended"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
   "author": "Cloud Four",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@cloudfour/eslint-plugin": "^5.0.0",
+    "eslint": "^6.8.0",
+    "prettier": "^1.19.1"
+  }
 }

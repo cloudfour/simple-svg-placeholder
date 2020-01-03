@@ -26,7 +26,7 @@ export default function simpleSvgPlaceholder({
       .replace(/\(/g, '%28') // Encode brackets
       .replace(/\)/g, '%29');
 
-    return 'data:image/svg+xml;charset=US-ASCII,' + encoded;
+    return `data:image/svg+xml;charset=US-ASCII,${encoded}`;
   }
 
   return cleaned;
