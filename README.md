@@ -23,7 +23,7 @@ const placeholder = simpleSvgPlaceholder(/* options */);
 
 ### Default
 
-<img src="./examples/default.svg" alt="">
+![](./examples/default.svg?sanitize=true)
 
 ```javascript
 simpleSvgPlaceholder()
@@ -31,7 +31,7 @@ simpleSvgPlaceholder()
 
 ### Dimensions
 
-<img src="./examples/size.svg" alt="">
+![](./examples/size.svg?sanitize=true)
 
 ```javascript
 simpleSvgPlaceholder({
@@ -42,7 +42,7 @@ simpleSvgPlaceholder({
 
 ### Text
 
-<img src="./examples/text.svg" alt="">
+![](./examples/text.svg?sanitize=true)
 
 ```javascript
 simpleSvgPlaceholder({
@@ -52,7 +52,7 @@ simpleSvgPlaceholder({
 
 ### Colors
 
-<img src="./examples/color.svg" alt="">
+![](./examples/color.svg?sanitize=true)
 
 ```javascript
 simpleSvgPlaceholder({
@@ -63,7 +63,7 @@ simpleSvgPlaceholder({
 
 ### Font
 
-<img src="./examples/font.svg" alt="">
+![](./examples/font.svg?sanitize=true)
 
 ```javascript
 simpleSvgPlaceholder({
