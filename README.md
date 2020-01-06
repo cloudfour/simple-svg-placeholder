@@ -116,4 +116,4 @@ If `true`, the function will return an encoded string for use as an `img` elemen
 
 ### charset `{String}`
 
-Defaults to `utf8`, but if your source HTML document's character set is different, you may want to update this to match.
+Defaults to `UTF-8`, but if your source HTML document's character set is different, you may want to update this to match.

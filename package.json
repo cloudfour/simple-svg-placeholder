@@ -1,6 +1,6 @@
 {
   "name": "@cloudfour/simple-svg-placeholder",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A very simple placeholder image generator with zero dependencies. Returns a data URI (or raw SVG source) as a string for use in templates.",
   "keywords": [
     "SVG",
