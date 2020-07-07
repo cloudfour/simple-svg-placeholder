@@ -36,6 +36,6 @@
   "devDependencies": {
     "@cloudfour/eslint-plugin": "11.0.0",
     "eslint": "7.4.0",
-    "prettier": "1.19.1"
+    "prettier": "2.0.5"
   }
 }
