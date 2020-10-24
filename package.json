@@ -35,7 +35,7 @@
   "homepage": "https://github.com/cloudfour/simple-svg-placeholder#readme",
   "devDependencies": {
     "@cloudfour/eslint-plugin": "14.0.0",
-    "eslint": "7.11.0",
+    "eslint": "7.12.0",
     "prettier": "2.1.2"
   }
 }
