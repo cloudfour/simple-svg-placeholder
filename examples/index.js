@@ -11,16 +11,16 @@ const examples = {
   color: simpleSvgPlaceholder({
     bgColor: '#0F1C3F',
     textColor: '#7FDBFF',
-    ...settings
+    ...settings,
   }),
   font: simpleSvgPlaceholder({
     fontFamily: 'Georgia, serif',
     fontWeight: 'normal',
-    ...settings
-  })
+    ...settings,
+  }),
 };
 
-Object.keys(examples).forEach(name => {
+Object.keys(examples).forEach((name) => {
   fs.writeFileSync(
     path.join(__dirname, `./${name}.svg`),
     examples[name],
