@@ -9,7 +9,7 @@ jobs:
       - name: Checkout 🛎
         uses: actions/checkout@v2
       - name: Setup Node env 🏗
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
       - name: Cache node_modules 📦
         uses: actions/cache@v2
         with:
