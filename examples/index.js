@@ -18,6 +18,11 @@ const examples = {
     fontWeight: 'normal',
     ...settings,
   }),
+  wrap: simpleSvgPlaceholder({
+    text: 'Well, hello there! Long time no see!',
+    textWrap: true,
+    ...settings,
+  }),
 };
 
 Object.keys(examples).forEach((name) => {
