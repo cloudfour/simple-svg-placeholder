@@ -1,5 +1,7 @@
 # Simple SVG Placeholder
 
+[![NPM version](https://img.shields.io/npm/v/@cloudfour/simple-svg-placeholder.svg)](https://www.npmjs.com/package/@cloudfour/simple-svg-placeholder) [![Build Status](https://github.com/cloudfour/simple-svg-placeholder/workflows/CI/badge.svg)](https://github.com/cloudfour/simple-svg-placeholder/actions?query=workflow%3ACI) [![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com)
+
 > A very simple placeholder image generator with zero dependencies. Returns a data URI (or raw SVG source) as a string for use in templates.
 
 ## Getting Started
