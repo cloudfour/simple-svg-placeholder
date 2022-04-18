@@ -18,7 +18,10 @@
     "examples": "node examples"
   },
   "eslintConfig": {
-    "extends": "plugin:@cloudfour/recommended"
+    "extends": "plugin:@cloudfour/recommended",
+    "rules": {
+      "@cloudfour/unicorn/text-encoding-identifier-case": "off"
+    }
   },
   "prettier": {
     "singleQuote": true
