@@ -1,6 +1,8 @@
-const fs = require('fs');
-const path = require('path');
-const simpleSvgPlaceholder = require('..');
+import { writeFileSync } from 'fs';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+// eslint-disable-next-line @cloudfour/node/no-unpublished-import
+import simpleSvgPlaceholder from '../mjs/index.js';
 
 const settings = { dataUri: false };
 
@@ -20,10 +22,8 @@ const examples = {
   }),
 };
 
+const dir = dirname(fileURLToPath(import.meta.url));
+
 for (const name of Object.keys(examples)) {
-  fs.writeFileSync(
-    path.join(__dirname, `./${name}.svg`),
-    examples[name],
-    'utf8'
-  );
+  writeFileSync(join(dir, `./${name}.svg`), examples[name], 'utf8');
 }
