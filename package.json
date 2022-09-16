@@ -11,10 +11,18 @@
     "mock",
     "URI"
   ],
-  "main": "index.js",
+  "main": "cjs/index.js",
+  "module": "mjs/index.js",
+  "exports": {
+    ".": {
+      "import": "./mjs/index.js",
+      "require": "./cjs/index.js"
+    }
+  },
   "scripts": {
     "check-lint": "prettier --check '**/*.js' && eslint '**/*.js'",
     "lint": "prettier --write '**/*.js' && eslint --fix '**/*.js'",
+    "prepare": "ascjs mjs cjs --no-default",
     "examples": "node examples"
   },
   "eslintConfig": {
@@ -38,6 +46,7 @@
   "homepage": "https://github.com/cloudfour/simple-svg-placeholder#readme",
   "devDependencies": {
     "@cloudfour/eslint-plugin": "21.1.0",
+    "ascjs": "^5.0.1",
     "eslint": "8.23.1",
     "prettier": "2.7.1",
     "typescript": "4.8.3"

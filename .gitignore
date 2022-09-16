@@ -1,2 +1,4 @@
-node_modules
 .vscode
+cjs/*
+!cjs/.gitkeep
+node_modules
