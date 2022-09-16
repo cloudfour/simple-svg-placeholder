@@ -1,7 +1,7 @@
 import { writeFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-// eslint-disable-next-line @cloudfour/node/no-unpublished-import
+// eslint-disable-next-line @cloudfour/n/no-unpublished-import
 import simpleSvgPlaceholder from '../mjs/index.js';
 
 const settings = { dataUri: false };
