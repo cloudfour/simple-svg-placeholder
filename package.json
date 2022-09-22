@@ -17,7 +17,8 @@
     ".": {
       "import": "./mjs/index.js",
       "require": "./cjs/index.js"
-    }
+    },
+    "./package.json": "./package.json",
   },
   "scripts": {
     "check-lint": "prettier --check '**/*.js' && eslint '**/*.js'",
