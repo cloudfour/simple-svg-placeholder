@@ -12,11 +12,19 @@ The package is available to install via npm:
 npm i --save @cloudfour/simple-svg-placeholder
 ```
 
-Once installed, you may import and call the function to generate placeholder SVGs:
+Once installed, you may import the function as an ES or CommonJS module:
 
 ```javascript
-const simpleSvgPlaceholder = require('@cloudfour/simple-svg-placeholder');
+// Module
+import simpleSvgPlaceholder from 'simple-svg-placeholder';
 
+// CommonJS
+const simpleSvgPlaceholder = require('@cloudfour/simple-svg-placeholder');
+```
+
+Then call the function to generate placeholder SVGs:
+
+```javascript
 const placeholder = simpleSvgPlaceholder(/* options */);
 // => 'data:image/svg+xml;...'
 ```
@@ -28,7 +36,7 @@ const placeholder = simpleSvgPlaceholder(/* options */);
 ![](./examples/default.svg?sanitize=true)
 
 ```javascript
-simpleSvgPlaceholder()
+simpleSvgPlaceholder();
 ```
 
 ### Dimensions
@@ -38,8 +46,8 @@ simpleSvgPlaceholder()
 ```javascript
 simpleSvgPlaceholder({
   width: 180,
-  height: 135 
-})
+  height: 135,
+});
 ```
 
 ### Text
@@ -48,8 +56,8 @@ simpleSvgPlaceholder({
 
 ```javascript
 simpleSvgPlaceholder({
-  text: 'Hello world!' 
-})
+  text: 'Hello world!',
+});
 ```
 
 ### Colors
@@ -59,8 +67,8 @@ simpleSvgPlaceholder({
 ```javascript
 simpleSvgPlaceholder({
   bgColor: '#0F1C3F',
-  textColor: '#7FDBFF'
-})
+  textColor: '#7FDBFF',
+});
 ```
 
 ### Font
@@ -70,8 +78,8 @@ simpleSvgPlaceholder({
 ```javascript
 simpleSvgPlaceholder({
   fontFamily: 'Georgia, serif',
-  fontWeight: 'normal'
-})
+  fontWeight: 'normal',
+});
 ```
 
 ## Option Reference
