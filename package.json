@@ -48,7 +48,7 @@
   "devDependencies": {
     "@cloudfour/eslint-plugin": "21.1.0",
     "ascjs": "5.0.1",
-    "eslint": "8.24.0",
+    "eslint": "8.25.0",
     "prettier": "2.7.1",
     "typescript": "4.8.4"
   }
