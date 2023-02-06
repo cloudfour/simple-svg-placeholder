@@ -16,7 +16,7 @@ Once installed, you may import the function as an ES or CommonJS module:
 
 ```javascript
 // Module
-import simpleSvgPlaceholder from 'simple-svg-placeholder';
+import simpleSvgPlaceholder from '@cloudfour/simple-svg-placeholder';
 
 // CommonJS
 const simpleSvgPlaceholder = require('@cloudfour/simple-svg-placeholder');
