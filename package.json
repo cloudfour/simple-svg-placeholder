@@ -47,7 +47,7 @@
   "homepage": "https://github.com/cloudfour/simple-svg-placeholder#readme",
   "devDependencies": {
     "@cloudfour/eslint-plugin": "21.1.0",
-    "ascjs": "5.0.1",
+    "ascjs": "6.0.2",
     "eslint": "8.39.0",
     "prettier": "3.0.0",
     "typescript": "5.1.6"
