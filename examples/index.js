@@ -1,5 +1,6 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
+
 const simpleSvgPlaceholder = require('..');
 
 const settings = { dataUri: false };
@@ -24,6 +25,6 @@ for (const name of Object.keys(examples)) {
   fs.writeFileSync(
     path.join(__dirname, `./${name}.svg`),
     examples[name],
-    'utf8'
+    'utf8',
   );
 }
