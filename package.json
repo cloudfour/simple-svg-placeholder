@@ -49,7 +49,7 @@
     "@cloudfour/eslint-plugin": "22.0.0",
     "ascjs": "6.0.2",
     "eslint": "8.46.0",
-    "prettier": "3.0.0",
+    "prettier": "3.0.1",
     "typescript": "5.1.6"
   }
 }
