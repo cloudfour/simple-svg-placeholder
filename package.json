@@ -21,16 +21,10 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "check-lint": "prettier --check '**/*.js' && eslint '**/*.js'",
-    "lint": "prettier --write '**/*.js' && eslint --fix '**/*.js'",
+    "check-lint": "prettier --list-different . && eslint .",
+    "lint": "prettier --write . && eslint --fix .",
     "prepare": "ascjs mjs cjs --no-default",
     "examples": "node examples"
-  },
-  "eslintConfig": {
-    "extends": "plugin:@cloudfour/recommended",
-    "rules": {
-      "@cloudfour/unicorn/text-encoding-identifier-case": "off"
-    }
   },
   "prettier": {
     "singleQuote": true
@@ -46,7 +40,7 @@
   },
   "homepage": "https://github.com/cloudfour/simple-svg-placeholder#readme",
   "devDependencies": {
-    "@cloudfour/eslint-plugin": "23.0.0",
+    "@cloudfour/eslint-config": "24.0.0",
     "ascjs": "6.0.3",
     "eslint": "9.20.1",
     "prettier": "3.5.1",

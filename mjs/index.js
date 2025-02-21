@@ -20,7 +20,7 @@ export default function simpleSvgPlaceholder({
   const cleaned = str
     .replace(/[\t\n\r]/gim, '') // Strip newlines and tabs
     .replace(/\s\s+/g, ' ') // Condense multiple spaces
-    .replace(/'/gim, '\\i'); // Normalize quotes
+    .replace(/'/gim, String.raw`\i`); // Normalize quotes
 
   if (dataUri) {
     const encoded = encodeURIComponent(cleaned)
