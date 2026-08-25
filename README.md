@@ -96,6 +96,10 @@ Defaults to `150`, the default height of SVG elements in most browsers.
 
 The text to display. Defaults to the image dimensions.
 
+This is treated as literal text, not markup: characters that are significant in
+XML (`&`, `<`, `>`, `"`) are escaped for you, so `'Tom & Jerry'` renders as
+written rather than producing an SVG the browser refuses to parse.
+
 ### fontFamily `{String}`
 
 The font to use for the text. For data URIs, this needs to be a system-installed font. Defaults to `'sans-serif'`.
@@ -122,7 +126,7 @@ The color of the text. For transparency, use an `rgba` or `hsla` color value. De
 
 ### dataUri `{Boolean}`
 
-If `true`, the function will return an encoded string for use as an `img` element's `src` value. If `false`, the function will return the unencoded SVG source. Defaults to `true`.
+If `true`, the function will return an encoded string for use as an `img` element's `src` value. If `false`, the function will return the unencoded SVG source, suitable for inlining into a document. Defaults to `true`.
 
 ### charset `{String}`
 
