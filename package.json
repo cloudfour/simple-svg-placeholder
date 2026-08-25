@@ -24,7 +24,8 @@
     "check-lint": "prettier --list-different . && eslint .",
     "lint": "prettier --write . && eslint --fix .",
     "prepare": "ascjs mjs cjs --no-default",
-    "examples": "node examples"
+    "examples": "node examples",
+    "test": "node --test"
   },
   "prettier": {
     "singleQuote": true

@@ -9,4 +9,12 @@ export default [
       'unicorn/expiring-todo-comments': 'off',
     },
   },
+  {
+    // Tests are never published, so they are free to use `node:test` even
+    // though the package itself supports older versions of Node.
+    files: ['test/**'],
+    rules: {
+      'n/no-unsupported-features/node-builtins': 'off',
+    },
+  },
 ];
