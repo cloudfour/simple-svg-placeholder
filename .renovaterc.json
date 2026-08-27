@@ -1,4 +1,4 @@
 {
-  "extends": ["config:recommended", ":automergeMinor", ":pinVersions"],
-  "minimumReleaseAge": "3 days"
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["local>cloudfour/renovate-config:library"]
 }
