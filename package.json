@@ -45,6 +45,6 @@
     "ascjs": "6.0.3",
     "eslint": "10.9.1",
     "prettier": "3.9.6",
-    "typescript": "5.9.3"
+    "typescript": "6.0.3"
   }
 }
