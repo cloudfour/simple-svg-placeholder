@@ -2,24 +2,22 @@
   "name": "@cloudfour/simple-svg-placeholder",
   "version": "1.2.0",
   "description": "A very simple placeholder image generator with zero dependencies. Returns a data URI (or raw SVG source) as a string for use in templates.",
-  "keywords": [
-    "SVG",
-    "placeholder",
-    "dummy",
-    "image",
-    "generator",
-    "mock",
-    "URI"
-  ],
-  "main": "cjs/index.js",
-  "module": "mjs/index.js",
+  "license": "MIT",
+  "repository": "github:cloudfour/simple-svg-placeholder",
+  "homepage": "https://github.com/cloudfour/simple-svg-placeholder#readme",
+  "bugs": "https://github.com/cloudfour/simple-svg-placeholder/issues",
+  "author": "Cloud Four",
   "exports": {
     ".": {
       "import": "./mjs/index.js",
-      "require": "./cjs/index.js"
+      "require": "./cjs/index.js",
+      "default": "./cjs/index.js"
     },
     "./package.json": "./package.json"
   },
+  "main": "./cjs/index.js",
+  "module": "./mjs/index.js",
+  "sideEffects": false,
   "scripts": {
     "check-lint": "prettier --list-different . && eslint .",
     "lint": "prettier --write . && eslint --fix .",
@@ -27,24 +25,28 @@
     "examples": "node examples",
     "test": "node --test"
   },
-  "prettier": {
-    "singleQuote": true
-  },
-  "author": "Cloud Four",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cloudfour/simple-svg-placeholder.git"
-  },
-  "bugs": {
-    "url": "https://github.com/cloudfour/simple-svg-placeholder/issues"
-  },
-  "homepage": "https://github.com/cloudfour/simple-svg-placeholder#readme",
+  "files": [
+    "package.json",
+    "cjs",
+    "mjs"
+  ],
+  "keywords": [
+    "svg",
+    "placeholder",
+    "dummy",
+    "image",
+    "generator",
+    "mock",
+    "uri"
+  ],
   "devDependencies": {
-    "@cloudfour/eslint-config": "25.0.1",
+    "@cloudfour/eslint-config": "26.1.0",
     "ascjs": "6.0.3",
     "eslint": "10.9.1",
     "prettier": "3.9.6",
-    "typescript": "5.9.3"
+    "typescript": "6.0.3"
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }

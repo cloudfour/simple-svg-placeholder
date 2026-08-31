@@ -21,10 +21,6 @@ const examples = {
   }),
 };
 
-for (const name of Object.keys(examples)) {
-  fs.writeFileSync(
-    path.join(__dirname, `./${name}.svg`),
-    examples[name],
-    'utf8',
-  );
+for (const [name, svg] of Object.entries(examples)) {
+  fs.writeFileSync(path.join(__dirname, `./${name}.svg`), svg, 'utf8');
 }
