@@ -33,8 +33,8 @@ export default function simpleSvgPlaceholder({
 
   // Thanks to: filamentgroup/directory-encoder
   const cleaned = str
-    .replaceAll(/[\t\n\r]/gim, '') // Strip newlines and tabs
-    .replaceAll(/\s\s+/g, ' '); // Condense multiple spaces
+    .replaceAll(/[\t\n\r]/gv, '') // Strip newlines and tabs
+    .replaceAll(/\s{2,}/gv, ' '); // Condense multiple spaces
 
   if (dataUri) {
     const encoded = encodeURIComponent(cleaned)

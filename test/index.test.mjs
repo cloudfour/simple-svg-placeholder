@@ -9,14 +9,15 @@ import simpleSvgPlaceholder from '../mjs/index.js';
  * @param {string} svg Raw SVG source.
  * @returns {string} The escaped text content.
  */
-const textContent = (svg) => svg.match(/<text[^>]*>(.*)<\/text>/)[1];
+const textContent = (svg) =>
+  svg.match(/<text[^>]*>(?<content>.*)<\/text>/v).groups.content;
 
 test('returns a data URI by default', () => {
-  assert.match(simpleSvgPlaceholder(), /^data:image\/svg\+xml;charset=UTF-8,/);
+  assert.match(simpleSvgPlaceholder(), /^data:image\/svg\+xml;charset=UTF-8,/v);
 });
 
 test('returns raw SVG source when dataUri is false', () => {
-  assert.match(simpleSvgPlaceholder({ dataUri: false }), /^<svg /);
+  assert.match(simpleSvgPlaceholder({ dataUri: false }), /^<svg /v);
 });
 
 test('labels the placeholder with its dimensions by default', () => {
@@ -28,7 +29,7 @@ test('labels the placeholder with its dimensions by default', () => {
 test('uses the charset option in the data URI prefix', () => {
   assert.match(
     simpleSvgPlaceholder({ charset: 'ISO-8859-1' }),
-    /^data:image\/svg\+xml;charset=ISO-8859-1,/,
+    /^data:image\/svg\+xml;charset=ISO-8859-1,/v,
   );
 });
 
@@ -50,13 +51,13 @@ test('escapes a double quote so it cannot terminate an attribute value', () => {
     dataUri: false,
   });
 
-  assert.match(svg, /<rect fill="#ddd&quot; data-injected=&quot;1"/);
+  assert.match(svg, /<rect fill="#ddd&quot; data-injected=&quot;1"/v);
 });
 
 test('escapes an ampersand in the data URI output too', () => {
   const svg = simpleSvgPlaceholder({ text: 'Tom & Jerry' });
 
-  assert.match(svg, /Tom%20%26amp%3B%20Jerry/);
+  assert.match(svg, /Tom%20%26amp%3B%20Jerry/v);
 });
 
 test('does not double-escape an ampersand that begins an entity', () => {
@@ -77,17 +78,17 @@ test('preserves quoted font names in a font stack', () => {
     dataUri: false,
   });
 
-  assert.match(svg, /font-family="'Comic Sans MS', cursive"/);
+  assert.match(svg, /font-family="'Comic Sans MS', cursive"/v);
 });
 
 test('percent-encodes an apostrophe so the data URI survives CSS url()', () => {
   const svg = simpleSvgPlaceholder({ text: "Scott's photo" });
 
-  assert.match(svg, /Scott%27s%20photo/);
+  assert.match(svg, /Scott%27s%20photo/v);
 });
 
 test('percent-encodes the brackets in the default rgba text color', () => {
-  assert.match(simpleSvgPlaceholder(), /rgba%280%2C0%2C0%2C0.5%29/);
+  assert.match(simpleSvgPlaceholder(), /rgba%280%2C0%2C0%2C0.5%29/v);
 });
 
 test('leaves no unescaped markup characters anywhere in the output', () => {
@@ -96,5 +97,5 @@ test('leaves no unescaped markup characters anywhere in the output', () => {
     dataUri: false,
   });
 
-  assert.equal(svg.match(/<(svg|rect|text|\/text|\/svg)\b/g).length, 5);
+  assert.equal(svg.match(/<(?:svg|rect|text|\/text|\/svg)\b/gv).length, 5);
 });

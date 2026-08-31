@@ -8,7 +8,7 @@
 
 The package is available to install via npm:
 
-```
+```sh
 npm i --save @cloudfour/simple-svg-placeholder
 ```
 
