@@ -40,7 +40,7 @@
     "uri"
   ],
   "devDependencies": {
-    "@cloudfour/eslint-config": "29.0.0",
+    "@cloudfour/eslint-config": "29.0.1",
     "ascjs": "6.0.3",
     "eslint": "10.14.0",
     "prettier": "3.9.10"
